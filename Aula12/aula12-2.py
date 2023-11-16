@@ -70,10 +70,15 @@ with open ("Python_08.fasta") as fasta:
 			protein_frames[geneID][frame] = protein		
 
 for geneID in protein_frmaes.keys():
+	longestProtein = ""
+	longestFrame = ""
 	for frame in protein_frames[geneID]:
-		if frame.startswith("M"):
-			cont = len(frame)
-
+		proteina = re.findall(r"(M[A-Z]+?)\*", protein_fames[geneID][frame]  #* significa 0 ou mais
+		for i in proteinas:
+			if  len(i) > len(longestProtein):
+				longestProtein = i
+				longestFrame = frame
+	print(geneID, longestProtein, logestFrame)
 
 with open ("Python_08.translated.aa","w") as outputFile:
 	for geneID in codons_frames.keys():
@@ -82,4 +87,5 @@ with open ("Python_08.translated.aa","w") as outputFile:
 			outputFile.write(headline)
 			#codons = " ".join(codons_frmae[geneID][frame]) + "\n"
 			outputFile.write(proteina)
-##CDM :  chmod +x Python_08.
+##CDM :  chmod +x Python_08.py
+## .\
