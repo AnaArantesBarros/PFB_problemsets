@@ -86,6 +86,8 @@ with open ("Python_08.translated.aa","w") as outputFile:
 			headline = geneId + "_" + frame + "\n"
 			outputFile.write(headline)
 			#codons = " ".join(codons_frmae[geneID][frame]) + "\n"
-			outputFile.write(proteina)
+
+
+#7. for i in proteinas.group(1): 			outputFile.write(proteina)
 ##CDM :  chmod +x Python_08.py
 ## .\
